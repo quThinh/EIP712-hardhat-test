@@ -44,7 +44,7 @@ describe("EIP712_Example", function () {
       name: domainName,
       version: signatureVersion,
       chainId: chainId,
-      verifyingContract: "0x304C5cd1E3ae6b296148a315A50fb659cD81E1dD"
+      verifyingContract: "0xD817395E464BB1A60fE802A21A3E0De509171fA4"
     }
 
     return { contract, otherAccount, domain, types };
@@ -59,10 +59,10 @@ describe("EIP712_Example", function () {
       console.log(signer_wallet.address);
       const signer = await signer_wallet.connect(provider);
       const ClaimRequest = {
-        requestId: "indexStakingClaimOrder#7",
+        requestId: "12112",
         beneficiary: "0x6be175D77B1B3f353f65A2E0648E0dDdD3090726",
         stakeToken: "0x0B84acc09875F7a311fC8CeABaCe3eC9553Ed821",
-        claimAmount: 1000
+        claimAmount: "13475000000000000000000"
       }
 
       const signature = await signTypedData(domain, types, ClaimRequest, signer);
